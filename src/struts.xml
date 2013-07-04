@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.enable.DynamicMethodInvocation" value="false"></constant>
+	<constant name="struts.devMode" value="false"></constant>
+	<constant name="struts.action.extension" value="action,do"></constant>
+	
+	<package name="root" extends="struts-default">
+		<action name="loginMsg" class="com.yuanwang.web.action.MsgAction" method="loginMsg">
+		</action>
+		<action name="msgPush" class="com.yuanwang.web.action.MsgAction" method="msgPush">
+			<result name="success">/jsp/msgpush.jsp</result>
+		</action>
+		<action name="sessionMgmt" class="com.yuanwang.web.action.MsgAction" method="sessionMgmt">
+			<result name="success">/jsp/msgsessionmgmt.jsp</result>
+		</action>
+		<action name="msgMgmt" class="com.yuanwang.web.action.MsgAction" method="msgMgmt">
+			<result name="success">/jsp/msgmanage.jsp</result>
+		</action>
+		
+		<action name="test" class="com.yuanwang.web.action.MsgAction" method="test">
+			<result name="success">/jsp/test.jsp</result>
+		</action>
+	</package>
+</struts>
